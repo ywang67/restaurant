@@ -1,0 +1,75 @@
+<div class="page-header">
+    <h1>User Reservation</h1>
+</div>
+
+<form ng-submit="rev.revUser(revData);">
+    <!-- E-mail-->
+    <label>First Name: </label>
+    <input class="form-control" type="text" name="firstname" placeholder="Please enter First Name" ng-model="rev.revData.firstname">
+    <br>
+    <!-- Username -->
+    <label>Last name: </label>
+    <input class="form-control" type="text" name="lastname" placeholder="Please enter Last Name" ng-model="rev.revData.lastname">
+    <br>
+    <!-- Password -->
+    <label>Phone: </label>
+    <input class="form-control" type="tel", name="phone" placeholder="Please enter phone" ng-model="rev.revData.phone">
+    <br>
+
+    <label>E-mail: </label>
+    <input class="form-control" type="email", name="email" placeholder="Please enter E-mail" ng-model="rev.revData.email">
+    <br>
+
+    <label>People: </label>
+    <select class="form-control" ng-model="rev.revData.people">
+        <!--<option>&#45;&#45;please choose number of customers</option>-->
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>13</option>
+        <option>14</option>
+        <option>15</option>
+
+
+    </select>
+    <br>
+
+    <label>Date: </label>
+    <input class="form-control" type="date", name="date" placeholder="Please choose Date" ng-model="rev.revData.date">
+    <br>
+
+    <label>Time: </label>
+    <input class="form-control" type="time", name="time" placeholder="Please choose Time" ng-model="rev.revData.time">
+    <br>
+
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
+<br>
+
+<div class="jumbotron text-center" ng-show="rev.loading">
+    <span class="glyphicon glyphicon-repeat spinner"></span>
+    <p>Loading......</p>
+</div>
+
+<div class="row show-hide-message" ng-show="rev.successMsg">
+    <div class="alert alert-success">{{rev.successMsg}}...Redirecting</div>
+</div>
+
+<br>
+
+
+
+<div class="row show-hide-message" ng-show="rev.errorMsg">
+    <div class="alert alert-danger">{{rev.errorMsg}}</div>
+</div>

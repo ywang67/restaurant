@@ -1,0 +1,39 @@
+<div class="page-header">
+    <h1>{{message}}</h1>
+</div>
+<!--<div class="search">
+    <input type="search" name="googleengine">
+</div>-->
+
+<div class="panel panel-info">
+    <div class="panel-heading" style="text-align:center; background-color:lightblue; height: 45px"><strong style="color:blue">All Orders</strong></div>
+    <table class="table">
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Phone</td>
+            <td>E-mail</td>
+            <td>People</td>
+            <td>Date</td>
+            <td>Time</td>
+            <td>ConfirmationCode</td>
+        </tr>
+        <tr ng-repeat="order in allOrders">
+            <td>{{order.firstname}}</td>
+            <td>{{order.lastname}}</td>
+            <td>{{order.phone}}</td>
+            <td>{{order.email}}</td>
+            <td>{{order.people}}</td>
+            <td>{{order.date | date:'MM/dd/yyyy'}}</td>
+            <td>{{order.time|date:'HH:mm'}}</td>
+            <td>{{order.confirmationCode}}</td>
+            <td><button type="submit" class="btn btn-danger" ng-click="cancelOrder(order.confirmationCode)">Cancel</button></td>
+            <td><a href="/editorder/{{order.confirmationCode}}"><button type="submit" class="btn btn-success">Edit</button></a></td>
+        </tr>
+    </table>
+    <div class="buttonsMag">
+        <a href="/"><button class="btn btn-info" style="float: right">Leave</button></a>
+        <a href="/reservation"><button class="btn btn-group" style="float:right">Create</button></a>
+    </div>
+
+</div>

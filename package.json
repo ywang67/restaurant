@@ -1,0 +1,25 @@
+{
+  "name": "reservation",
+  "version": "1.0.0",
+  "description": "mean stack application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "MEAN",
+    "stack"
+  ],
+  "author": "Stephen Wang",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1",
+    "jsonwebtoken": "^7.2.1",
+    "mongoose": "^4.8.1",
+    "morgan": "^1.7.0",
+    "voucher-code-generator": "^1.1.1"
+  }
+}

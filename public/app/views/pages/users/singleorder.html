@@ -1,0 +1,40 @@
+<div class="page-header">
+    <h1>{{message}}</h1>
+</div>
+<div class="panel panel-info">
+    <div class="panel-heading" style="text-align:center; background-color:lightblue; height: 45px"><strong style="color:blue">User user</strong></div>
+
+    <table class="table table-striped">
+        <tr>
+            <td>First Name</td>
+            <td>{{order.firstname}}</td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>{{order.lastname}}</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>{{order.phone}}</td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td>{{order.email}}</td>
+        </tr>
+        <tr>
+            <td>People</td>
+            <td>{{order.people}}</td>
+        </tr>
+        <tr>
+            <td>Date:</td>
+            <td>{{order.date | date:'MM/dd/yyyy'}}</td>
+        </tr>
+        <tr>
+            <td>Time:</td>
+            <td>{{order.time|date:'HH:mm'}}</td>
+        </tr>
+    </table>
+
+
+    <a href="/"><button class="btn btn-info" style="float:right">Leave</button></a>
+</div>

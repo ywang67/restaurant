@@ -1,0 +1,16 @@
+<div class="page-header">
+    <h1 style="color:deeppink; font-style: italic;font-family: 'Franklin Gothic Demi'">Best of Menu</h1>
+    <div class="row">
+        <div ng-repeat="dish in dishes">
+            <div class="col-lg-12 col-md-8">
+                <div class="thumbnail">
+                <img ng-src="{{dish.img}}">
+                <div class="caption">
+                    <p style="color:deeppink; font-style: italic;font-family: 'Franklin Gothic Demi'">{{dish.name}}</p>
+                    <p style="color:deeppink; font-style: italic;font-family: 'Franklin Gothic Demi'">Price: {{dish.price}}</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

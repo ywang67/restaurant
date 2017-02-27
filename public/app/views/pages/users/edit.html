@@ -1,0 +1,41 @@
+<div class="page-header">
+    <h1>Order Edit</h1>
+</div>
+
+<form ng-submit="update(order)">
+
+    <label>People: </label>
+    <select class="form-control" ng-model="order.people">
+        <!--<option>&#45;&#45;please choose number of customers</option>-->
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>13</option>
+        <option>14</option>
+        <option>15</option>
+
+
+    </select>
+    <br>
+
+    <label>Date: </label>
+    <input class="form-control" type="date", name="date" placeholder="Please choose Date" ng-model="order.date">
+    <br>
+
+
+    <label>Time: </label>
+    <input class="form-control" type="time", name="time" placeholder="Please choose Time" ng-model="order.time">
+    <br>
+
+
+    <button class="btn btn-primary" type="submit">Update</button>
+</form>
